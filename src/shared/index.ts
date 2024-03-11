@@ -1,8 +1,8 @@
-export { queryClient } from "./lib/tanstackquery/tanstackQuery";
-export { API } from "./lib/axios/axios";
+export { queryClient } from "./tanstackquery/tanstackQuery";
+export { API } from "./axios/axios";
 
 export {
 	useBears,
 	useFish,
 	useBearActions,
-} from "./lib/zustand/example/exampleStore";
+} from "./zustand/example/exampleStore";

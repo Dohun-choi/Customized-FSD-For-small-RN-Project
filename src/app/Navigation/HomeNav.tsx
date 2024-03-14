@@ -1,11 +1,11 @@
 import { StyleSheet } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { ExampleScreen, ExampleScreenProps, HomeScreen } from "../../screens";
+import { ExampleScreen, HomeScreen } from "../../screens";
 
 export type HomeParamList = {
 	home: undefined;
-	example: ExampleScreenProps;
+	example: { text: string };
 };
 
 const Stack = createNativeStackNavigator<HomeParamList>();

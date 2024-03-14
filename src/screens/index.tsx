@@ -1,5 +1,2 @@
 export { default as HomeScreen } from "./home/HomeScreen";
-export {
-	default as ExampleScreen,
-	ExampleScreenProps,
-} from "./home/ExampleScreen";
+export { default as ExampleScreen } from "./home/ExampleScreen";

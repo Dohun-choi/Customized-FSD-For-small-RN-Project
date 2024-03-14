@@ -1,7 +1,13 @@
 import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import { Tab } from "./reactNavigations";
 import HomeNav from "./HomeNav";
+
+export type RootParamList = {
+	"0": undefined;
+};
+
+const Tab = createBottomTabNavigator<RootParamList>();
 
 const AppNav = () => {
 	return (

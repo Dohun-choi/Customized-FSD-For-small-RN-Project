@@ -1,7 +1,9 @@
+import React from "react";
 import { StyleSheet } from "react-native";
+import { Example } from "../../components";
 
 const HomeScreen = () => {
-	return <></>;
+	return <Example />;
 };
 
 export default HomeScreen;

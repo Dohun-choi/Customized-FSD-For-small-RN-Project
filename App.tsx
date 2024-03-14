@@ -1,11 +1,11 @@
-import Index from "./src/app/example/Index";
+import AppMain from "./src/app/AppMain";
 import { StatusBar } from "expo-status-bar";
 
 function App() {
 	return (
 		<>
 			<StatusBar style="auto" />
-			<Index />
+			<AppMain />
 		</>
 	);
 }

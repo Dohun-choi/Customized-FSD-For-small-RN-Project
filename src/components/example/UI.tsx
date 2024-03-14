@@ -5,7 +5,7 @@ interface Props {
 	children: ReactNode;
 }
 
-const UI: React.FC<Props> = ({ children }) => {
+const UserInterface: React.FC<Props> = ({ children }) => {
 	return (
 		<View className="flex-1 items-center justify-center bg-white">
 			{children}
@@ -13,4 +13,4 @@ const UI: React.FC<Props> = ({ children }) => {
 	);
 };
 
-export default UI;
+export default UserInterface;

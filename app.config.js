@@ -1,7 +1,7 @@
 module.exports = {
 	expo: {
-		name: "Front",
-		slug: "Front",
+		name: "curt_poem_fsd_rn",
+		slug: "curt_poem_fsd_rn",
 		version: "1.0.0",
 		orientation: "portrait",
 		icon: "./assets/icon.png",

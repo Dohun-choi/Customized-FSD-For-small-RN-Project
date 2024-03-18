@@ -36,11 +36,11 @@
 
 
 
-tanstackQueray의 프로바이더는 app레이어의 app.tsx에 바로 추가해주었습니다. 이때 queryClientsms tanstackQueary의 전역 설정과 관계된 부분이고 하위 레이어인 components 내부에서 사용이 가능해야되므로 shared에 위치합니다.
+tanstackQueray의 프로바이더는 app레이어의 app.tsx에 바로 추가해주었습니다. 이때 queryClientsms tanstackQueary의 전역 설정과 관계된 부분이고 어플리케이션의 진입점과 관련되므로 app 레이어에 있습니다.
 
 
 
-app 슬라이스에는 index.ts가 아닌 app.tsx로 이름을 설정하여 기존의 app.tsx와 같다는 것을 분명히 하였습니다. 최상위에 존재하는 app.tsx가 app 슬라이스의 app.tsx를 import하여 사용합니다.
+app 슬라이스에는 index.ts가 아닌 app.tsx로 이름을 설정하여 기존의 app.tsx와 같다는 것을 분명히 하였습니다. 최상위에 존재하는 app.tsx가 app 슬라이스의 app.tsx를 import하여 사용합니다. 최상위의 app.tsx는 storybook과 실제 애플리케이션의 실행을 나누는 기준이 됩니다.
 
 #### screens
 
@@ -66,13 +66,17 @@ components는 실제의 기능이 수행되는 로직과 UI를 세그먼트로 �
 
 screens와 마찬가지로 index.ts를 두어 캡슐화를 흉내내었습니다.
 
+
+
+이름이 widget이나 feature 등 기존의 fsd 아키텍처와 다른 이유는 동료들이 해당 폴더 구조 사용에 익숙하고 역할도 비슷하기 때문입니다. 다만 슬라이스와 세그먼트로 나누어지는 것에 주의해 주세요.
+
 #### shared
 
-마지막 레이어입니다. 전역에서 사용할 공통 컴포넌트와 전역 색상 설정 그리고 라이브러리들의 전역 설정이 여기에 정의됩니다. 애플리케이션 전반에서 사용되는 axios의 인스턴스, tanstackQueary의 QueryClient, 그리고 전역 상태 관리를 위한 zustand의 스토어들이 여기서 설정됩니다.
+마지막 레이어입니다. 라이브러리들의 전역 설정이 여기에 정의됩니다. 애플리케이션 전반에서 사용되는 axios의 인스턴스, tanstackQueary의 QueryClient, 그리고 전역 상태 관리를 위한 zustand의 스토어들이 여기서 설정됩니다.
 
 
 
-라이브러리는 각각의 슬라이스로 나누어져 들어갑니다. axios, tanstackquery, zustand가 위치하고 그 내부에 세그먼트가 위치합니다. zustand가 여러 개의 store로 나누어질 수 있고 각 store는 다른 파일로 저장될 것입니다.
+라이브러리는 각각의 슬라이스로 나누어져 들어갑니다. 이 레포지토리에서는 axios, tanstackquery, zustand의 설정이 위치하고 그 내부에 세그먼트가 위치합니다. zustand가 여러 개의 store로 나누어질 수 있고 각 store는 다른 파일로 저장될 것입니다.
 
 여기도 마찬가지로 index.ts가 있습니다.
 

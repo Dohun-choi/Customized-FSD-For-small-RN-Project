@@ -5,7 +5,7 @@ import "@react-navigation/native";
 
 import HomeScreen from "./HomeScreen";
 
-// 외부 라이브러리 mocking
+// 외부 라이브러리 모의(mocking) - @react-navigation/native 전체를 모의합니다.
 jest.mock("@react-navigation/native");
 
 describe("Example component 렌더링 확인", () => {

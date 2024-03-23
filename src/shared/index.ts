@@ -1,5 +1,8 @@
+// axios
+export { axiosInstance } from "./axios/axios";
+
+// tanstack query
 export { queryClient } from "./tanstackquery/tanstackQuery";
-export { API } from "./axios/axios";
 
 export {
 	useBears,

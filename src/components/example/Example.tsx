@@ -9,7 +9,7 @@ function Example() {
 	const bearActions = useBearActions();
 
 	const navigation = useNavigation<Navigation>();
-	function hanldePress() {
+	function handlePress() {
 		navigation.navigate("example", { text: "adw" });
 	}
 
@@ -25,7 +25,7 @@ function Example() {
 					}}
 				/>
 			</UserInterface>
-			<Button title="이동" onPress={hanldePress} />
+			<Button title="이동" onPress={handlePress} />
 		</>
 	);
 }

@@ -91,3 +91,7 @@ test 코드는 테스트하고자하는 각각의 컴포넌트 혹은 페이지�
 example이라는 이름으로 사용 예시를 작성해 두었습니다.
 
 스토리북 사용의 예시는 .storybook 디렉토리의 exmaple에 두었습니다.
+
+
+
+저의 블로그에 [react navigation 사용 관련 타입 설정에 대한 글](https://curt-poem.tistory.com/entry/%EA%B0%9C%EB%B0%9C-%EB%85%B8%ED%8A%B8-React-navigation%EC%97%90%EC%84%9C-%EB%8D%9C-%EA%B7%80%EC%B0%AE%EA%B8%B0-%EC%9C%84%ED%95%B4-%EB%8D%94-%EA%B0%95%EB%A0%A5%ED%95%9C-%ED%83%80%EC%9E%85-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0)을 업로드 하였습니다.

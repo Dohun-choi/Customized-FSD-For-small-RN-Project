@@ -1,24 +1,21 @@
-import { StyleSheet } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { ExampleScreen, HomeScreen } from "../../screens";
+import { RoomScreen, HomeScreen } from "../../screens";
 
 export type HomeParamList = {
 	home: undefined;
-	example: { text: string };
+	room: { stuff: string };
 };
 
 const Stack = createNativeStackNavigator<HomeParamList>();
 
 const HomeNav = () => {
 	return (
-		<Stack.Navigator>
+		<Stack.Navigator screenOptions={{ headerTitle: "집" }}>
 			<Stack.Screen name="home" component={HomeScreen}></Stack.Screen>
-			<Stack.Screen name="example" component={ExampleScreen}></Stack.Screen>
+			<Stack.Screen name="room" component={RoomScreen}></Stack.Screen>
 		</Stack.Navigator>
 	);
 };
 
 export default HomeNav;
-
-const styles = StyleSheet.create({});

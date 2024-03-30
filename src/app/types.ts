@@ -1,22 +1,21 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RouteProp } from "@react-navigation/native";
+
 import { HomeParamList } from "./Navigation/HomeNav";
 import { RootParamList } from "./Navigation/AppNav";
-import { RouteProp as A } from "@react-navigation/native";
+import { BackyardParamList } from "./Navigation/BackyardNav";
 
-type NativeStackParamList = RootParamList & HomeParamList;
+type ScreenParamList = RootParamList & HomeParamList & BackyardParamList;
 
-type Route<T extends keyof NativeStackParamList> = A<NativeStackParamList, T>;
+type Route<T extends keyof ScreenParamList> = RouteProp<ScreenParamList, T>;
 
 declare global {
-	type Navigation = NativeStackNavigationProp<NativeStackParamList>;
-	interface RootRouteProp<T extends keyof NativeStackParamList> {
-		route: Route<T>;
-	}
-	interface RootNavigationProp {
-		navigation: NativeStackNavigationProp<NativeStackParamList>;
-	}
-	interface RootScreenProp<T extends keyof NativeStackParamList> {
-		navigation: NativeStackNavigationProp<NativeStackParamList>;
+	type Navigation<T extends keyof ScreenParamList> = NativeStackNavigationProp<
+		ScreenParamList,
+		T
+	>;
+	interface RootScreenProp<T extends keyof ScreenParamList> {
+		navigation: NativeStackNavigationProp<ScreenParamList, T>;
 		route: Route<T>;
 	}
 }

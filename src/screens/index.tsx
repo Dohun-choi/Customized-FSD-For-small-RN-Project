@@ -1,2 +1,3 @@
 export { default as HomeScreen } from "./home/HomeScreen";
-export { default as ExampleScreen } from "./home/ExampleScreen";
+export { default as RoomScreen } from "./home/RoomScreen";
+export { default as BackyardScreen } from "./backyard/BackyardScreen";

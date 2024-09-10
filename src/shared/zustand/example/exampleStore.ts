@@ -26,5 +26,13 @@ const useBearStore = create<BearStore>((set) => ({
 export const useBears = () => useBearStore((state) => state.bears);
 export const useFish = () => useBearStore((state) => state.fish);
 
+// 혹은 구독하려는 컴포넌트에서 다음과 같이 사용
+export default function exampleStore() {
+	const bears = useBearStore((state) => state.bears);
+	// return (
+	// <p>{bears}</p>
+	// )
+}
+
 // 🎉 액션 함수는 바뀌지 않기 때문에 한번에 export
 export const useBearActions = () => useBearStore((state) => state.actions);
